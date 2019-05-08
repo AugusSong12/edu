@@ -29,6 +29,7 @@ public class UserController extends BaseController<User> {
         System.out.println(user);
         return "default";
     }
+
     @RequestMapping(MANAGE)
     public String userManage(){
         System.out.println("user控制器方法运行");
