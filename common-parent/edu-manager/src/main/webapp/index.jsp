@@ -19,40 +19,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
-    <style>
-        /*#parent{*/
-            /*border: 1px solid pink;*/
-            /*text-align: center;*/
-            /*!*padding-left: ;*!*/
-            /*padding-left: 500px;*/
-        /*}*/
-        /*#logindiv{*/
-            /*text-align: left;*/
-        /*}*/
 
-    </style>
 </head>
 <body>
-<div id="parent" class="container">
-    <div id="logindiv">
-        <form id="loginForm" class="form-horizontal">
-            <div class="form-group">
-                <label for="user-name-label">Email address</label>
-                <input type="email" class="input-lg" id="user-name-label" placeholder="Email">
-            </div>
-            <div class="form-group">
-                <label for="password-domain-label">Password</label>
-                <input type="password" class="input-lg" id="password-domain-label" placeholder="Password">
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox"> Check me out
-                </label>
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-    </div>
-</div>
-
+<jsp:forward page="WEB-INF/views/login.jsp"></jsp:forward>
 </body>
 </html>

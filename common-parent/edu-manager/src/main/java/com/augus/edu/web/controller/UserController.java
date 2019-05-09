@@ -30,19 +30,20 @@ public class UserController extends BaseController<User> {
     public String login(User user, @RequestParam("checkcode") String checkcode ){
         String imgCode = request.getSession().getAttribute("key").toString();
         request.getSession().removeAttribute("key");
-        System.out.println("imgCode================="+imgCode);
-        System.out.println("username===="+user.getUsername()+"==" +
-                "password====="+user.getPassword());
-        System.out.println("checkCode====="+checkcode);
-        User checkUser = userService.login(user.getUsername(), user.getPassword());
-        System.out.println("checkUser====="+checkUser);
+//        System.out.println("imgCode================="+imgCode);
+//        System.out.println("username===="+user.getUsername()+"==" +
+//                "password====="+user.getPassword());
+//        System.out.println("checkCode====="+checkcode);
+
         String msg ="";
         if(imgCode==null||!imgCode.equalsIgnoreCase(checkcode)){
             msg = "验证码错误";
-            return "default";
+            return "login";
+        }else {
+            User checkUser = userService.login(user.getUsername(), user.getPassword());
+            System.out.println("checkUser====="+checkUser);
         }
-
-        return "default";
+        return "manage/index";
     }
 
     @RequestMapping(MANAGE)
