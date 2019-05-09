@@ -2,7 +2,7 @@ package com.augus.edu.service.base;
 
 public interface IBaseService<T> {
 
-    public T findById(Integer id);
+    public T findById(String id);
 
     public T findByUUId(String id);
 

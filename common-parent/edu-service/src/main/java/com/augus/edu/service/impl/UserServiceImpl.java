@@ -1,6 +1,7 @@
 package com.augus.edu.service.impl;
 
 import com.augus.edu.model.User;
+import com.augus.edu.model.UserExample;
 import com.augus.edu.service.IUserService;
 import com.augus.edu.service.base.BaseServiceImpl;
 import org.springframework.stereotype.Service;
@@ -11,12 +12,14 @@ import org.springframework.transaction.annotation.Transactional;
 public class UserServiceImpl extends BaseServiceImpl<User> implements IUserService {
     @Override
     public User login(String username, String password) {
-        return null;
+        return userMapper.findUserByNameAndPwd(username,password);
     }
 
     @Override
-    public User findById(Integer id) {
-        return userMapper.selectByPrimaryKey(id);
+    public User findById(String id) {
+        User user = userMapper.selectByPrimaryKey(id);
+        System.out.println(user);
+        return null;
     }
 
     @Override

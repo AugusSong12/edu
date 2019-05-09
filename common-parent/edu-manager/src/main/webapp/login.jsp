@@ -47,6 +47,9 @@ input[type=password] {
 	if(window.self != window.top){
 		window.top.location = window.location;
 	}
+
+
+
 </script>
 </head>
 <body>
@@ -64,7 +67,7 @@ input[type=password] {
 			</div>
 			<div class="loginForm">
 				<form id="loginform" name="loginform" method="post" class="niceform"
-					action="${pageContext.request.contextPath }/userAction_login.action">
+					action="${pageContext.request.contextPath }/user/login.do">
 					<div id="idInputLine" class="loginFormIpt showPlaceholder"
 						style="margin-top: 5px;">
 						<input id="loginform:idInput" type="text" name="username"
